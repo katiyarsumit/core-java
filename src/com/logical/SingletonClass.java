@@ -1,0 +1,33 @@
+package com.logical;
+
+class Singleton{
+private static Singleton obj;
+	
+	private Singleton(){
+		
+	}
+	public static Singleton getInstance(){
+		if(obj!=null){
+			return obj;
+		}else{
+			obj=new Singleton();
+			return obj;
+		}
+	}	
+}
+
+public class SingletonClass {
+public static void main(String[] args) {
+	Singleton s=Singleton.getInstance();
+	Singleton s1=Singleton.getInstance();
+	Singleton s2=Singleton.getInstance();
+	Singleton s3=Singleton.getInstance();
+	Singleton s4=Singleton.getInstance();
+	System.out.println(s);
+	System.out.println(s1);
+	System.out.println(s2);
+	System.out.println(s3);
+	System.out.println(s4);
+	
+}
+}
